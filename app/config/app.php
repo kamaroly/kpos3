@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'App\Modules\User\UserServiceProvider',
+        'App\Modules\Customers\CustmerServiceProvider',
 
 	),
 

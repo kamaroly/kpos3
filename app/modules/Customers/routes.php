@@ -1,5 +1,9 @@
 <?php
 
-Route::controller('user', 'App\Modules\User\Controllers\UserController', array(
-    'getIndex'   		=> 'user'
-));
+
+Route::group(array('prefix'=>'customers'), function()
+{
+	Route::get('/',function(){
+		return ' This is a route group';
+	});
+});

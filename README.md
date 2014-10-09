@@ -9,15 +9,15 @@ This is new Kpos3 built  using HMVC pattern and migrated from CodeIgniter to lar
 
 ## Features
 
-- Sales,
-- Purchases,
-- Customer,
-- Items,
-- Inventory,
-- Users,
+- Sales
+- Purchases
+- Customer
+- Items
+- Inventory
+- Users
 - Multi-Stores
-- Reports.
-- Account.
+- Reports
+- Account
 
  ## Official website
  http://kamaroly.com
