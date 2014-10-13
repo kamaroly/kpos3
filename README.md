@@ -3,7 +3,7 @@ Affordable, complete platform for running a shop. it manages sales, prints recei
 
 ## What's new
 After 3 years of working on the point of sales system which is built on CodeIgniter, I decided to revamp the entire platform and
-build a new platform which is total powered by API. this will allow the total flexibility and extension of the platform .
+write a new platform  using Laravel framework which is total powered by API. this will allow the total flexibility and extension of the platform .
 
 ## Official dicumentation
 
@@ -11,8 +11,5 @@ Documentation for the entire system can be found on the [Kamaro Lambert Website]
 
 ### Contributing To Laravel
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/kamaroly/kpos3) repository.**
+**All issues and pull requests should be filed on the [Kamaro Point of Sale](http://github.com/kamaroly/kpos3) repository.**
 
-### License
-
-Kamaro Point of Sale is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
