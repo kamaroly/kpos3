@@ -9,7 +9,7 @@ write a new platform  using Laravel framework which is total powered by API. thi
 
 Documentation for the entire system can be found on the [Kamaro Lambert Website](http://kamaroly.com/support/#/).
 
-### Contributing To Laravel
+### Contributing To KPOS
 
 **All issues and pull requests should be filed on the [Kamaro Point of Sale](http://github.com/kamaroly/kpos3) repository.**
 
