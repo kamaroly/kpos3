@@ -55,12 +55,12 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'kpos3',
-			'username'  => 'root',
+			'database'  => 'forge',
+			'username'  => 'forge',
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => 'kpos3_',
+			'prefix'    => '',
 		),
 
 		'pgsql' => array(

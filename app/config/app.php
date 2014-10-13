@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => '5b8Z1SNJPPmTpL7EN2ZnaqQsemFUcnJk',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -121,8 +121,6 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        'App\Modules\User\UserServiceProvider',
-        'App\Modules\Customers\CustmerServiceProvider',
 
 	),
 
