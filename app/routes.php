@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+Route::api(['version' => 'v1'], function()
+{
+    Route::get('users', function()
+    {
+        return 'You should get all users from here ';
+    });
+
+});
