@@ -12,12 +12,12 @@ class CreateItemCategoriesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('item_categories', function(Blueprint $table)
+		Schema::create('item_categories', function(Illuminate\Database\Schema\Blueprint $table)
 		{
                $table->increments('id');      
                $table->integer('parent');
-               $table->string('title');
-               $table->string('slug');
+               $table->string('title')->->unique();
+               $table->string('slug')->->unique();
                $table->string('description');
                $table->boolean('status');
                $table->string('image');		

@@ -12,12 +12,12 @@ class CreateCustomersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('customers', function(Blueprint $table)
+		Schema::create('customers', function(Illuminate\Database\Schema\Blueprint $table)
 		{
              $table->increments('id');
              $table->string('first_name');
              $table->string('last_name');
-             $table->string('email');
+             $table->string('email')->unique();
              $table->string('phone');
              $table->string('history'); //This will store the history of the customer transaction in a json format
              $table->string('image');

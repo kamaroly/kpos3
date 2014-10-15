@@ -11,10 +11,10 @@ class CreateItemTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('items', function (Blueprint $table) {
+		Schema::create('items', function (Illuminate\Database\Schema\Blueprint $table) {
 			
           $table->increments('id')->index();
-          $table->string('name',30)->index();
+          $table->string('name',30)->unique();
           $table->string('slug',40);
           $table->longText('description',255);
           $table->boolean('allow_decimal_quantities'); //Sets this flag to true if decimal value is allowed in quantity (default to false)
