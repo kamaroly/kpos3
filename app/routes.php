@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
 
 Route::get('/', function()
 {
@@ -52,22 +42,7 @@ Route::api(['version' => 'v1'], function()
 		});
     });
     
-     // items  management
-    Route::group(array('prefix' => 'items'), function()
-	{		
-		$testEnvironment = 'development';
-		//get all
-		Route::get('/',['as'=>'itemslist','uses'=>'ItemsController@index']); //Get all
-		Route::post('/',['as'=>'create','uses'=>'ItemsController@create']); //Create
-        Route::get('{itemsisd}',['as' => 'selecteditems','uses' => 'ItemsController@Getitems'])
-             ->where('itemsisd', '[\d,]+');
-
-        Route::put('{itemId}','ItemsController@update'); //Update
-        Route::delete('{itemId}','ItemsController@destroy')
-             ->where('itemsisd', '[\d,]+');; //Delete
-		Route::get('{itemId}/restore','ItemsController@restore'); //Restore
-    
-    });
+     
 
     //Customer  management
     Route::group(array('prefix' => 'customers'), function()
@@ -138,5 +113,3 @@ Route::api(['version' => 'v1'], function()
 		});
     });
 });
-
-

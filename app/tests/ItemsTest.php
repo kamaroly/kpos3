@@ -94,5 +94,11 @@ class ItemsTest extends TestCase {
            $this->assertResponseOk();
 	}
 
+  //6. Test items module
+	public function testItemModule()
+	{
+		$this->call('GET','items');
+		$this->assertResponseOk();
+	}
 
 }

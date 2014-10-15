@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Dingo\Api\ApiServiceProvider',
+		'Creolab\LaravelModules\ServiceProvider',
 
 	),
 
