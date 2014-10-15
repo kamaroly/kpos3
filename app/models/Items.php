@@ -9,7 +9,7 @@ class Items extends \Eloquent {
                  'allow_decimal_quantities',
                  'quantity',
                  'cost',
-                 'start_barcode',
+                 'barcodes',
                  'disable_discount',
                  'disable_inventory',
                  'enable_open_price',

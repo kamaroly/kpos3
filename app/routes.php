@@ -56,9 +56,7 @@ Route::api(['version' => 'v1'], function()
     Route::group(array('prefix' => 'items'), function()
 	{
 		//get all
-		Route::get('/', function(){
-			return 'List All';
-		});
+		Route::get('/','ItemsController@index');
 		
 		//Get one 
 		Route::get('{itemId}', function(){

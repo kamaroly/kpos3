@@ -2,15 +2,11 @@
 
 class ExampleTest extends TestCase {
 
-	/**
-	 * A basic functional test example.
-	 *
-	 * @return void
-	 */
-	public function testCreateUser()
+	 //Test if the item root api index is okay
+	public function testItemslist()
 	{
-		$this->call('POST','api/users',['name'=>'Lambert Kamaro']);
-        $this->assertResponseOk();
+		$this->call('GET','api/items');
+		$this->assertResponseOk();
 	}
 
 }

@@ -16,8 +16,8 @@ class CreateItemCategoriesTable extends Migration {
 		{
                $table->increments('id');      
                $table->integer('parent');
-               $table->string('title')->->unique();
-               $table->string('slug')->->unique();
+               $table->string('title')->unique();
+               $table->string('slug')->unique();
                $table->string('description');
                $table->boolean('status');
                $table->string('image');		

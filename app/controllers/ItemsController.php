@@ -16,7 +16,10 @@ class ItemsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		//get facker instance 
+		$Faker = Faker\Factory::create();
+
+		return $Faker->email;
 	}
 
 	/**

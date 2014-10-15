@@ -18,14 +18,17 @@ class ItemCategoriesController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Show returns categories by ids.
 	 * GET /itemcategories/create
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function getbyids($ids)
 	{
-		//
+		 $ids = explode(',', $ids);
+
+        return $this->categories::whereIn('id', $ids)->get();
+          })->where('id', '[\d,]+');
 	}
 
 	/**
