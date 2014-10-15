@@ -8,6 +8,7 @@
 		"way/generators": "~2.0",
 		"zizaco/confide": "~4.0@dev",
 		"dingo/api": "0.*",
+		"creolab/laravel-modules": "dev-master",
 		"phpunit/phpunit": "4.*",
 		"fzaninotto/faker": "1.*"
 	},

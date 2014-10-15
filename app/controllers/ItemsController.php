@@ -39,49 +39,50 @@ class ItemsController extends \BaseController {
 	 */
 	public function create()
 	{
-		if ($this->items->create(Input::all())) {
-			
-			Redirect::to('itemslist');
-		}
-		else{
-			Response::header(404);
-		}
+	
+	   return $this->items->create(Input::all());
 	}
 
 	/**
 	 * Display the specified resource.
-	 * GET /items/{id}
+	 * GET /items/{ids}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function Getitems($itemIds)
 	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /items/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
+		 //get passed ids
+		 $ids = explode(',', $itemIds);
+        
+         return $this->items->whereIn('id', $ids)->get();
+         
+	
 	}
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /items/{id}
+	 * PUT /items/{itemId}
 	 *
-	 * @param  int  $id
+	 * @param  int  $itemId
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($itemId)
 	{
-		//
+		$updateinformation = Input::all(); //Get all submited information
+
+        $item = $this->items->FindOrFail($itemId); //Find item with the id provided
+        $item->fill($updateinformation);    //fill the data
+        
+        if ($item->save()) {
+          return ['id'=>$itemId,
+                  'message' => 'items.item_well_updted'
+                 ];
+        }else{
+        	 return ['id'=>$itemId,
+                     'message' => 'items.could_not_update'
+                 ];
+        }
 	}
 
 	/**

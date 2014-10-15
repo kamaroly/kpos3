@@ -54,14 +54,17 @@ Route::api(['version' => 'v1'], function()
     
      // items  management
     Route::group(array('prefix' => 'items'), function()
-	{
+	{		
+		$testEnvironment = 'development';
 		//get all
 		Route::get('/',['as'=>'itemslist','uses'=>'ItemsController@index']); //Get all
 		Route::post('/',['as'=>'create','uses'=>'ItemsController@create']); //Create
-        Route::get('{itemsisd}'['as' => 'selecteditems','uses' => 'ItemsController@GetSelected'])
-        Route::get('{itemId}','ItemsController@GetItem'); //get one
+        Route::get('{itemsisd}',['as' => 'selecteditems','uses' => 'ItemsController@Getitems'])
+             ->where('itemsisd', '[\d,]+');
+
         Route::put('{itemId}','ItemsController@update'); //Update
-        Route::delete('{itemId}','ItemsController@destroy'); //Delete
+        Route::delete('{itemId}','ItemsController@destroy')
+             ->where('itemsisd', '[\d,]+');; //Delete
 		Route::get('{itemId}/restore','ItemsController@restore'); //Restore
     
     });
