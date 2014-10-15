@@ -7,11 +7,10 @@ class ExampleTest extends TestCase {
 	 *
 	 * @return void
 	 */
-	public function testBasicExample()
+	public function testCreateUser()
 	{
-		$crawler = $this->client->request('GET', '/');
-
-		$this->assertTrue($this->client->getResponse()->isOk());
+		$this->call('POST','api/users',['name'=>'Lambert Kamaro']);
+        $this->assertResponseOk();
 	}
 
 }

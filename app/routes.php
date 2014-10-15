@@ -19,40 +19,7 @@ Route::get('/', function()
 
 Route::api(['version' => 'v1'], function()
 {
-    # User Management
-	Route::group(array('prefix' => 'users'), function()
-	{
-		//get all users
-		Route::get('/', function(){
-			return 'This will be listing all users';
-		});
-		
-		//Get one user
-		Route::get('{userid}', function(){
-			return 'Get a user with id: {userid}';
-		});
-       
-        //Create one user
-        Route::post('/', function(){
-        	return 'Create a user';
-        });
-
-        //Update a user
-        Route::put('{userId}', function(){
-        	return 'Update a user';
-        });
-        //Delete a user
-		Route::delete('{userId}', function(){
-			return 'Delete a user';
-		});
-
-		//Restore a Deleted user
-		Route::get('{userId}/restore',function(){
-           return 'Restore a deleted user';
-		});
-    });
-    
-   // Product category management
+     // Product category management
     Route::group(array('prefix' => 'categories'), function()
 	{
 		//get all
