@@ -13,15 +13,179 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('hello ');
 });
 
 
 Route::api(['version' => 'v1'], function()
 {
-    Route::get('users', function()
-    {
-        return 'You should get all users from here ';
+    # User Management
+	Route::group(array('prefix' => 'users'), function()
+	{
+		//get all users
+		Route::get('/', function(){
+			return 'This will be listing all users';
+		});
+		
+		//Get one user
+		Route::get('{userid}', function(){
+			return 'Get a user with id: {userid}';
+		});
+       
+        //Create one user
+        Route::post('/', function(){
+        	return 'Create a user';
+        });
+
+        //Update a user
+        Route::put('{userId}', function(){
+        	return 'Update a user';
+        });
+        //Delete a user
+		Route::delete('{userId}', function(){
+			return 'Delete a user';
+		});
+
+		//Restore a Deleted user
+		Route::get('{userId}/restore',function(){
+           return 'Restore a deleted user';
+		});
+    });
+    
+   // Product category management
+    Route::group(array('prefix' => 'categories'), function()
+	{
+		//get all
+		Route::get('/', function(){
+			return 'List All';
+		});
+		
+		//Get one 
+		Route::get('{categoryid}', function(){
+			return 'Get a one with id: {categoryid}';
+		});
+       
+        //Create one 
+        Route::post('/', function(){
+        	return 'Create one';
+        });
+
+        //Update 
+        Route::put('{categoryid}', function(){
+        	return 'Update ';
+        });
+        //Delete
+		Route::delete('{categoryid}', function(){
+			return 'Delete a user';
+		});
+
+		//Restore deleted
+		Route::get('{categoryid}/restore',function(){
+           return 'Restore a deleted';
+		});
+    });
+    
+     // items  management
+    Route::group(array('prefix' => 'items'), function()
+	{
+		//get all
+		Route::get('/', function(){
+			return 'List All';
+		});
+		
+		//Get one 
+		Route::get('{itemId}', function(){
+			return 'Get a one with id: {itemId}';
+		});
+       
+        //Create one 
+        Route::post('/', function(){
+        	return 'Create one';
+        });
+
+        //Update 
+        Route::put('{itemId}', function(){
+        	return 'Update ';
+        });
+        //Delete
+		Route::delete('{itemId}', function(){
+			return 'Delete a user';
+		});
+
+		//Restore deleted
+		Route::get('{itemId}/restore',function(){
+           return 'Restore a deleted';
+		});
     });
 
+    //Customer  management
+    Route::group(array('prefix' => 'customers'), function()
+	{
+		//get all
+		Route::get('/', function(){
+			return 'List All';
+		});
+		
+		//Get one 
+		Route::get('{CustomerId}', function(){
+			return 'Get a one with id: {CustomerId}';
+		});
+       
+        //Create one 
+        Route::post('/', function(){
+        	return 'Create one';
+        });
+
+        //Update 
+        Route::put('{CustomerId}', function(){
+        	return 'Update ';
+        });
+        //Delete
+		Route::delete('{CustomerId}', function(){
+			return 'Delete a user';
+		});
+
+		//Restore deleted
+		Route::get('{CustomerId}/restore',function(){
+           return 'Restore a deleted';
+		});
+    });
+    //Cart  management
+    Route::group(array('prefix' => 'cart'), function()
+	{
+		//get all
+		Route::get('/', function(){
+			return 'List All items in cart currently';
+		});
+		
+		//Get one 
+		Route::get('{itemid}', function(){
+			return 'Get on Cart item using ID';
+		});
+       
+        //Create one 
+        Route::get('{ItemId}/remove', function(){
+        	return 'Remove one Item from the cart';
+        });
+
+        //Update 
+        Route::post('{ItemId}', function(){
+        	return 'Update item in the cart';
+        });
+        //Destroy current cart
+		Route::delete('/destroy', function(){
+			return 'Destroy';
+		});
+
+		//Empty cart
+		Route::get('/empty',function(){
+           return 'Empty current cart';
+		});
+       //susbpend cart
+		Route::get('/empty',function(){
+           return 'suspend current cart';
+		});
+    });
 });
+
+

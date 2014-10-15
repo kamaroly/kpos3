@@ -7,8 +7,10 @@
 		"laravel/framework": "4.2.*",
 		"way/generators": "~2.0",
 		"zizaco/confide": "~4.0@dev",
-		"dingo/api": "0.*"
+		"dingo/api": "0.*",
+		"phpunit/phpunit": "4.*"
 	},
+	
 	"autoload": {
 		"classmap": [
 			"app/commands",
