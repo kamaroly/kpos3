@@ -56,31 +56,14 @@ Route::api(['version' => 'v1'], function()
     Route::group(array('prefix' => 'items'), function()
 	{
 		//get all
-		Route::get('/','ItemsController@index');
-		
-		//Get one 
-		Route::get('{itemId}', function(){
-			return 'Get a one with id: {itemId}';
-		});
-       
-        //Create one 
-        Route::post('/', function(){
-        	return 'Create one';
-        });
-
-        //Update 
-        Route::put('{itemId}', function(){
-        	return 'Update ';
-        });
-        //Delete
-		Route::delete('{itemId}', function(){
-			return 'Delete a user';
-		});
-
-		//Restore deleted
-		Route::get('{itemId}/restore',function(){
-           return 'Restore a deleted';
-		});
+		Route::get('/',['as'=>'itemslist','uses'=>'ItemsController@index']); //Get all
+		Route::post('/',['as'=>'create','uses'=>'ItemsController@create']); //Create
+        Route::get('{itemsisd}'['as' => 'selecteditems','uses' => 'ItemsController@GetSelected'])
+        Route::get('{itemId}','ItemsController@GetItem'); //get one
+        Route::put('{itemId}','ItemsController@update'); //Update
+        Route::delete('{itemId}','ItemsController@destroy'); //Delete
+		Route::get('{itemId}/restore','ItemsController@restore'); //Restore
+    
     });
 
     //Customer  management

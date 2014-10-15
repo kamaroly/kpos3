@@ -6,7 +6,7 @@ class ItemsController extends \BaseController {
     
     function __construct(Items $item) {
     	
-    	$this->item = $item;
+    	$this->items = $item;
     }
 	/**
 	 * Display a listing of the resource.
@@ -17,20 +17,18 @@ class ItemsController extends \BaseController {
 	public function index()
 	{
 		//get facker instance 
-		$Faker = Faker\Factory::create();
-
-		return $Faker->email;
+		 return $this->items->all();
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 * GET /items/create
+	 * Show one items based on theid
+	 * GET /items/{itemId}
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function GetItem($itemId)
 	{
-		//
+		return $this->items->FindOrFail($itemId);
 	}
 
 	/**
@@ -39,9 +37,15 @@ class ItemsController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function create()
 	{
-		//
+		if ($this->items->create(Input::all())) {
+			
+			Redirect::to('itemslist');
+		}
+		else{
+			Response::header(404);
+		}
 	}
 
 	/**
