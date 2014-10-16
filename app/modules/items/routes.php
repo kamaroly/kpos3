@@ -14,7 +14,7 @@ Route::api(['version' => 'v1', 'prefix' => 'api'], function()
              ->where('itemsisd', '[\d,]+');
         
         Route::get('{itemsisd}/categories',['as'=>'itemscategories','uses'=>'App\Modules\Items\Controllers\ApiItemsController@categories']);
-        
+        Route::get('{itemsisd}/branches',['as' =>'itembranches','uses' =>'App\Modules\Items\Controllers\ApiItemsController@branches']);
         Route::post('/',['as'=>'create','uses'=>'App\Modules\Items\Controllers\ApiItemsController@create']); //Create
         Route::put('{itemId}','App\Modules\Items\Controllers\ApiItemsController@update'); //Update
         Route::delete('{itemId}','App\Modules\Items\Controllers\ApiItemsController@destroy')

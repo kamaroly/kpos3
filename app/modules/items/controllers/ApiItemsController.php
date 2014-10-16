@@ -1,8 +1,11 @@
 <?php namespace App\Modules\Items\Controllers;
 //load the models
 use App\Modules\Items\Models\Item as Item;
-use App\Modules\categories\Models\category as category;
-
+use App\Modules\Categories\Models\Category as Category;
+/**
+ * Kpos3   Kamaro Point of Sale
+ * @author Lambert Kamaro <http://github.com/kamaroly>
+ */
 class ApiItemsController extends \BaseController {
     
     public $item;
@@ -96,8 +99,21 @@ class ApiItemsController extends \BaseController {
     */
     public function categories($itemIds)
     {
-    	return $this->item->find($itemIds)->toArray();
+    	return $this->item->find($itemIds)->Category;
     }
+    
+     /**
+    * Get categories of passed ITEMS ids
+    * GET api/items/{ids}/categories
+    *@param  $ids
+    *@return Response
+    */
+    public function branches($itemIds)
+    {
+    	return $this->item->find($itemIds)->branches;
+    }
+
+    
 	/**
 	 * Remove the specified resource from storage.
 	 * DELETE /items/{id}

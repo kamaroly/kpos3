@@ -1,5 +1,8 @@
 <?php namespace App\Modules\Items\Models;
-
+/**
+ * Kpos3   Kamaro Point of Sale
+ * @author Lambert Kamaro <http://github.com/kamaroly>
+ */
 
 class Item extends \Eloquent {
     
@@ -28,8 +31,14 @@ class Item extends \Eloquent {
                 ];
 
    //Relationship with Category
-   public function categories()
+   public function Category()
    {
    	 return $this->belongsTo('App\Modules\Categories\Models\Category');
    }
+
+   //Relationship to the branches
+    public function branches()
+     {
+       return $this->belongsToMany('App\Modules\Branches\Models\Branch');
+     }
 }

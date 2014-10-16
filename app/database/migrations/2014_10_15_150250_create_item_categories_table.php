@@ -12,16 +12,16 @@ class CreateItemCategoriesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('item_categories', function(Illuminate\Database\Schema\Blueprint $table)
+		Schema::create('categories', function(Illuminate\Database\Schema\Blueprint $table)
 		{
                $table->increments('id');      
                $table->integer('parent');
                $table->string('title')->unique();
                $table->string('slug')->unique();
-               $table->string('description');
+               $table->string('description')->nullable();
                $table->boolean('status');
-               $table->string('image');		
-               $table->longText('custom_fields'); //This will restore custom additional fields in a json formal
+               $table->string('image')->nullable();		
+               $table->longText('custom_fields')->nullable(); //This will restore custom additional fields in a json formal
                $table->integer('created_by') ; //Id of the user who created this record
                $table->integer('modified_by'); //id of the user who modified this records
                $table->timestamps();

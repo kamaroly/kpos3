@@ -3,8 +3,8 @@
 //load the models
 use App\Modules\Items\Models\Item as Item;
 /**
- * items controller
- * @author Lambert Kamaro <kamaroly@gmail.com>
+ * Kpos3   Kamaro Point of Sale
+ * @author Lambert Kamaro <http://github.com/kamaroly>
  */
 class ItemsController extends \BaseController {
     

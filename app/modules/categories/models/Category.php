@@ -1,8 +1,11 @@
 <?php namespace App\Modules\Categories\Models;
- 
+ /**
+ * Kpos3   Kamaro Point of Sale
+ * @author Lambert Kamaro <http://github.com/kamaroly>
+ */
 class Category extends \Eloquent {
 
-  protected $table = 'item_categories';
+  protected $table = 'categories';
 	
   protected $fillable = [
                           'parent',
@@ -19,7 +22,7 @@ class Category extends \Eloquent {
   //Relationship with item
   public function item()
   {
-  	 return $this->hasMany('App\Modules\Items\Models\item');
+  	 return $this->hasMany('App\Modules\Items\Models\item','category_id');
   }
 
 }

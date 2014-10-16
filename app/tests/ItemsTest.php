@@ -108,4 +108,10 @@ class ItemsTest extends TestCase {
         $this->call('GET','api/items/2/categories');
         $this->assertResponseOk();
     }
+
+  //8. Test item branches
+   public function testItemBranches(){
+       $this->call('GET','api/items/1/branches');
+       $this->assertResponseOk();
+   }
 }
