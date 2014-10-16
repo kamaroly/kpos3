@@ -47,6 +47,9 @@ class ApiItemsController extends \BaseController {
 	{
 	
 	   return $this->item->create(\Input::all());
+
+	   //if the items has branches then 
+	   //$this->item->attach(branchs ids in array);
 	}
 
 	/**
