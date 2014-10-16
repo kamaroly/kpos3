@@ -2,7 +2,7 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
-
+use App\Modules\Customers\Models\Customer as Customer;
 class CustomerTableseederTableSeeder extends Seeder {
 
 	public function run()
@@ -11,7 +11,7 @@ class CustomerTableseederTableSeeder extends Seeder {
 
 		foreach(range(1, 10) as $index)
 		{
-	 Customers::create([
+	 Customer::create([
             'first_name'    => $faker->firstName,
             'last_name'     => $faker->lastName,
             'email'         => $faker->email,

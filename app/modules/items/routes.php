@@ -1,26 +1,26 @@
 <?php
 
-Route::get('items','App\Modules\items\Controllers\ItemsController@index');
+Route::get('customers','App\Modules\Customers\Controllers\CustomersController@index');
 
 
 Route::api(['version' => 'v1', 'prefix' => 'api'], function()
 {
-    // items  management
-    Route::group(array('prefix' => 'items'), function()
+    // Customers  management
+    Route::group(array('prefix' => 'customers'), function()
 	{		
 		//get all
-		Route::get('/',['as'=>'itemslist','uses'=>'App\Modules\Items\Controllers\ApiItemsController@index']); //Get all
-		Route::get('{itemsisd}',['as' => 'selecteditems','uses' => 'App\Modules\Items\Controllers\ApiItemsController@Getitems'])
-             ->where('itemsisd', '[\d,]+');
+		Route::get('/',['as'=>'Customerslist','uses'=>'App\Modules\Customers\Controllers\ApiCustomersController@index']); //Get all
+		Route::get('{Customersisd}',['as' => 'selectedCustomers','uses' => 'App\Modules\Customers\Controllers\ApiCustomersController@GetCustomers'])
+             ->where('Customersisd', '[\d,]+');
         
-        Route::get('{itemsisd}/categories',['as'=>'itemscategories','uses'=>'App\Modules\Items\Controllers\ApiItemsController@categories']);
-        Route::get('{itemsisd}/branches',['as' =>'itembranches','uses' =>'App\Modules\Items\Controllers\ApiItemsController@branches']);
-        Route::post('/',['as'=>'create','uses'=>'App\Modules\Items\Controllers\ApiItemsController@create']); //Create
-        Route::put('{itemId}','App\Modules\Items\Controllers\ApiItemsController@update'); //Update
-        Route::delete('{itemId}','App\Modules\Items\Controllers\ApiItemsController@destroy')
-             ->where('itemsisd', '[\d,]+');; //Delete
+        Route::get('{Customersisd}/categories',['as'=>'Customerscategories','uses'=>'App\Modules\Customers\Controllers\ApiCustomersController@categories']);
+        Route::get('{Customersisd}/branches',['as' =>'Customerbranches','uses' =>'App\Modules\Customers\Controllers\ApiCustomersController@branches']);
+        Route::post('/',['as'=>'create','uses'=>'App\Modules\Customers\Controllers\ApiCustomersController@create']); //Create
+        Route::put('{CustomerId}','App\Modules\Customers\Controllers\ApiCustomersController@update'); //Update
+        Route::delete('{CustomerId}','App\Modules\Customers\Controllers\ApiCustomersController@destroy')
+             ->where('Customersisd', '[\d,]+');; //Delete
 		
-		Route::get('{itemId}/restore','App\Modules\Items\Controllers\ApiItemsController@restore'); //Restore
+		Route::get('{CustomerId}/restore','App\Modules\Customers\Controllers\ApiCustomersController@restore'); //Restore
     
     });
 });

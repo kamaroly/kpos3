@@ -3,8 +3,16 @@
 use App\Modules\Items\Models\Item as Item;
 use App\Modules\Categories\Models\Category as Category;
 /**
- * Kpos3   Kamaro Point of Sale
- * @author Lambert Kamaro <http://github.com/kamaroly>
+ * Kpos
+ * 
+ * An open source Point Of Sale
+ *
+ * @package		kpos3
+ * @author		Kamaro Lambert <http://github.com/kamaroly>
+ * @copyright	Copyright (c) 2012 - 2014 Kpos, 
+ * @license		http://www.kamaroly.com/license.txt
+ * @link		http://www.kamaroly.com
+ * 
  */
 class ApiItemsController extends \BaseController {
     

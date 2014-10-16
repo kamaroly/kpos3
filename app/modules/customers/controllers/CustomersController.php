@@ -1,7 +1,6 @@
-<?php namespace App\Modules\items\Controllers;
+<?php namespace App\Modules\Customers\Controllers;
 
-//load the models
-use App\Modules\Items\Models\Item as Item;
+use App\Modules\Customers\Models\Customer as Customer;
 /**
  * Kpos
  * 
@@ -14,13 +13,15 @@ use App\Modules\Items\Models\Item as Item;
  * @link		http://www.kamaroly.com
  * 
  */
-class ItemsController extends \BaseController {
+
+
+class CustomersController extends \BaseController {
     
-    public $item;
+    public $customer;
     
-    function __construct(Item $item) {
+    function __construct(Customer $Customer) {
     	
-    	$this->item = $item;
+    	$this->customer = $Customer;
     }
 	/**
 	 * Display a listing of the resource.
@@ -31,7 +32,7 @@ class ItemsController extends \BaseController {
 	public function index()
 	{
 		//get facker instance 
-		 return 'Test';
+		 return $this->customer->first();
 	}
 
 	

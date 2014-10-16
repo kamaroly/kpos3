@@ -1,6 +1,6 @@
 <?php
 
-class Customers extends \Eloquent {
+class Customer extends \Eloquent {
 	protected $fillable = [
             'first_name',
             'last_name',
