@@ -1,14 +1,15 @@
 <?php namespace App\Modules\Items\Controllers;
 //load the models
-use App\Modules\Items\Models\Items as Items;
+use App\Modules\Items\Models\Item as Item;
+use App\Modules\categories\Models\category as category;
 
 class ApiItemsController extends \BaseController {
     
-    public $items;
+    public $item;
     
-    function __construct(Items $item) {
+    function __construct(Item $items) {
     	
-    	$this->items = $item;
+    	$this->item = $items;
     }
 	/**
 	 * Display a listing of the resource.
@@ -19,7 +20,7 @@ class ApiItemsController extends \BaseController {
 	public function index()
 	{
 		//get facker instance 
-		 return $this->items->all();
+		 return $this->item->all();
 	}
 
 	/**
@@ -30,7 +31,7 @@ class ApiItemsController extends \BaseController {
 	 */
 	public function GetItem($itemId)
 	{
-		return $this->items->FindOrFail($itemId);
+		return $this->item->FindOrFail($itemId);
 	}
 
 	/**
@@ -42,7 +43,7 @@ class ApiItemsController extends \BaseController {
 	public function create()
 	{
 	
-	   return $this->items->create(\Input::all());
+	   return $this->item->create(\Input::all());
 	}
 
 	/**
@@ -57,7 +58,7 @@ class ApiItemsController extends \BaseController {
 		 //get passed ids
 		 $ids = explode(',', $itemIds);
         
-         return $this->items->whereIn('id', $ids)->get();
+         return $this->item->whereIn('id', $ids)->get();
          
 	
 	}
@@ -73,7 +74,7 @@ class ApiItemsController extends \BaseController {
 	{
 		$updateinformation = \Input::all(); //Get all submited information
 
-        $item = $this->items->FindOrFail($itemId); //Find item with the id provided
+        $item = $this->item->FindOrFail($itemId); //Find item with the id provided
         $item->fill($updateinformation);    //fill the data
         
         if ($item->save()) {
@@ -87,6 +88,16 @@ class ApiItemsController extends \BaseController {
         }
 	}
 
+    /**
+    * Get categories of passed ITEMS ids
+    * GET api/items/{ids}/categories
+    *@param  $ids
+    *@return Response
+    */
+    public function categories($itemIds)
+    {
+    	return $this->item->find($itemIds)->toArray();
+    }
 	/**
 	 * Remove the specified resource from storage.
 	 * DELETE /items/{id}

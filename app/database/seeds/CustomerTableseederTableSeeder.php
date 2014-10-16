@@ -11,7 +11,7 @@ class CustomerTableseederTableSeeder extends Seeder {
 
 		foreach(range(1, 10) as $index)
 		{
-			Customers::create([
+	 Customers::create([
             'first_name'    => $faker->firstName,
             'last_name'     => $faker->lastName,
             'email'         => $faker->email,

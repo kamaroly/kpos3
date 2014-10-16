@@ -1,7 +1,10 @@
-<?php
+<?php namespace App\Modules\Categories\Models;
+ 
+class Category extends \Eloquent {
 
-class Item_categories extends \Eloquent {
-	protected $fillable = [
+  protected $table = 'item_categories';
+	
+  protected $fillable = [
                           'parent',
                           'title',
                           'slug',
@@ -16,7 +19,7 @@ class Item_categories extends \Eloquent {
   //Relationship with item
   public function item()
   {
-  	 return $this->hasMany('items','category','id');
+  	 return $this->hasMany('App\Modules\Items\Models\item');
   }
 
 }

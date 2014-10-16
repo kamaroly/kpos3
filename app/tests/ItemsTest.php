@@ -100,5 +100,12 @@ class ItemsTest extends TestCase {
 		$this->call('GET','items');
 		$this->assertResponseOk();
 	}
-
+   
+  //7. Test items categories
+    public function testItemCategories()
+    {
+        
+        $this->call('GET','api/items/2/categories');
+        $this->assertResponseOk();
+    }
 }

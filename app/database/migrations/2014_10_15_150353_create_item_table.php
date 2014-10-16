@@ -26,7 +26,7 @@ class CreateItemTable extends Migration {
           $table->boolean('enable_open_price');        //Sets this flag to true if cashier is allowed to change retail price (default to false)
           $table->decimal('retail_price',5,1);         //retail price, only zero or positive value is allowed; should not have more than 2 decimal places
           $table->boolean('tax_exempt');               //Sets this flag to true if tax should not be computed for this item (default to false)
-          $table->integer('category');                  //category id
+          $table->integer('category_id');                  //category id
           $table->string('thumbnail',100);             //item image 
           $table->longText('tag_list') ;               //list of tags separated with comma
           $table->boolean('status');                   //Possible values are True and False (True = Active, 'false' = Deleted)

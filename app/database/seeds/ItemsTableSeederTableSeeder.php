@@ -2,6 +2,7 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use App\Modules\Items\Models\Item as Item;
 
 class ItemsTableSeederTableSeeder extends Seeder {
 
@@ -11,7 +12,7 @@ class ItemsTableSeederTableSeeder extends Seeder {
 
 		foreach(range(1, 10) as $index)
 		{
-			Items::create(  [
+			Item::create(  [
                  'name'                   => $faker->name,
                  'slug'                   => $faker->slug,
                  'description'            => $faker->text,
@@ -24,7 +25,7 @@ class ItemsTableSeederTableSeeder extends Seeder {
                  'enable_open_price'      => true,
                  'retail_price'           =>$faker->randomNumber(2),
                  'tax_exempt'             =>true,
-                 'category'               =>$faker->randomDigit,
+                 'category_id'               =>$faker->randomDigit,
                  'thumbnail'              =>$faker->imageUrl($width = 140, $height = 140),
                  'tag_list'               => str_replace(' ', '_', $faker->text(6)),
                  'status'                 =>true,

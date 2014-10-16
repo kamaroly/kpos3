@@ -1,6 +1,9 @@
 <?php namespace App\Modules\Items\Models;
 
-class Items extends \Eloquent {
+
+class Item extends \Eloquent {
+    
+    protected $table ="items";
 
 	protected $fillable = [
                  'name',
@@ -15,7 +18,7 @@ class Items extends \Eloquent {
                  'enable_open_price',
                  'retail_price',
                  'tax_exempt',
-                 'category',
+                 'category_id',
                  'thumbnail',
                  'tag_list',
                  'status',
@@ -27,6 +30,6 @@ class Items extends \Eloquent {
    //Relationship with Category
    public function categories()
    {
-   	 return $this->belongsTo('item_categories','id','category');
+   	 return $this->belongsTo('App\Modules\Categories\Models\Category');
    }
 }
