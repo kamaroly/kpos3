@@ -1,0 +1,1 @@
+C:\wamp\www\kpos3\app/views/currencies/show.blade.php

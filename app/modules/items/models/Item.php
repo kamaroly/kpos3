@@ -15,7 +15,7 @@ class Item extends \Eloquent {
                  'allow_decimal_quantities',
                  'quantity',
                  'cost',
-                 'barcodes',
+                 'serialnumber',
                  'disable_discount',
                  'disable_inventory',
                  'enable_open_price',
@@ -40,5 +40,11 @@ class Item extends \Eloquent {
     public function branches()
      {
        return $this->belongsToMany('App\Modules\Branches\Models\Branch');
+     }
+
+     //Many to Many relationship with Taxes
+      public function taxes()
+     {
+       return $this->belongsToMany('App\Modules\Taxes\Models\Tax');
      }
 }

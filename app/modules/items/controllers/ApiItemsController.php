@@ -2,6 +2,7 @@
 //load the models
 use App\Modules\Items\Models\Item as Item;
 use App\Modules\Categories\Models\Category as Category;
+use App\Modules\Taxes\Models\Tax as Tax;
 /**
  * Kpos
  * 
@@ -113,7 +114,7 @@ class ApiItemsController extends \BaseController {
     	return $this->item->find($itemIds)->Category;
     }
     
-     /**
+    /**
     * Get categories of passed ITEMS ids
     * GET api/items/{ids}/categories
     *@param  $ids
@@ -122,6 +123,17 @@ class ApiItemsController extends \BaseController {
     public function branches($itemIds)
     {
     	return $this->item->find($itemIds)->branches;
+    }
+
+    /**
+    * Get categories of passed ITEMS ids
+    * GET api/items/{ids}/taxes
+    *@param  $ids
+    *@return Response
+    */
+    public function taxes($itemIds)
+    {
+    	return $this->item->find($itemIds)->taxes;
     }
 
     

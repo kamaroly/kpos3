@@ -20,7 +20,7 @@ class CreateItemTable extends Migration {
           $table->boolean('allow_decimal_quantities'); //Sets this flag to true if decimal value is allowed in quantity (default to false)
           $table->decimal('quantity',5, 2);            //cost, only zero or positive value is allowed; should have more than 2 decimal palces
           $table->decimal('cost',5, 2);                //cost, only zero or positive value is allowed; should have more than 2 decimal palces
-          $table->longText('barcodes')->nullable();           //barcodes per store , it will be saved in jason format
+          $table->longText('serialnumber')->nullable();   //barcodes per store , it will be saved in jason format
           $table->boolean('disable_discount');         //Sets this flag to true if retail price cannot be discounted at the store (default to false)
           $table->boolean('disable_inventory');        //Sets this flag to true if product does not require inventory tracking (e.g. service), (default to false)
           $table->boolean('enable_open_price');        //Sets this flag to true if cashier is allowed to change retail price (default to false)
