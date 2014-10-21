@@ -1,4 +1,4 @@
-<div class="im_dialogs_col_wrap">
+<div class="im_dialogs_col_wrap" style=" background:#CCE;">
       <div class="im_dialogs_panel">
 
       </div>
@@ -107,6 +107,23 @@
           <span class="im_dialog_user">Branches</span><!-- end ngSwitchWhen: -->
          </div>
        <span class="im_dialog_chat_from" >Manage Branches</span>
+       </div>
+     </a>
+</li>
+
+<!--Reports -->
+<li class="im_dialog_wrap" >
+      <a class="im_dialog" >
+         <!--iCON-->
+         <div class="im_dialog_photo pull-left">
+          <i class="fa fa-line-chart fa-3x primary"></i> 
+         </div>
+     
+       <div class="im_dialog_message_wrap">
+         <div class="im_dialog_peer" >
+          <span class="im_dialog_user">Reports</span><!-- end ngSwitchWhen: -->
+         </div>
+       <span class="im_dialog_chat_from" >View/Generate reports</span>
        </div>
      </a>
 </li>

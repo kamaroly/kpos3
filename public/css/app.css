@@ -1006,6 +1006,7 @@ img.welcome_logo {
 }
 .im_dialogs_scrollable_wrap .im_dialog_wrap {
   margin-top: 0;
+  border-bottom: 1px solid #fff;
 }
 .im_dialogs_scrollable_wrap a.im_dialog {
   clear: both;
