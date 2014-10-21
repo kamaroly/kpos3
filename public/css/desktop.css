@@ -87,7 +87,7 @@
 
 
 .im_page_wrap {
-  background: #FFF;
+  background: #f8f8f8;
   max-width: 100%;
   min-width: 300px;
   margin: 0 auto;
@@ -168,7 +168,8 @@ a.footer_lang_link.active:active {
 
 .im_history_col_wrap {
   float: left;
-  width: 69%;
+  width: 80%;
+  background: #f8f8f8;
 }
 .im_history_scrollable_wrap {
   /* Hardware acceleration in Safari */

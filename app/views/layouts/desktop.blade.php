@@ -6,8 +6,7 @@
   @include('partials/header')
 
    
-  <div class="im_page_wrap" >
-
+  <div class="im_page_wrap">
   <div class="im_page_split clearfix">
 
     @include('partials/leftside')

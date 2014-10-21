@@ -1011,7 +1011,6 @@ img.welcome_logo {
 .im_dialogs_scrollable_wrap a.im_dialog {
   clear: both;
   overflow: hidden;
-  color: #000;
   padding: 8px 9px;
   border-radius: 0;
 }

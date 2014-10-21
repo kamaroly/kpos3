@@ -1,7 +1,8 @@
-<?php namespace App\Modules\items\Controllers;
+<?php namespace App\Modules\Items\Controllers;
 
 //load the models
 use App\Modules\Items\Models\Item as Item;
+use View;
 /**
  * Kpos
  * 
@@ -31,7 +32,7 @@ class ItemsController extends \BaseController {
 	public function index()
 	{
 		//get facker instance 
-		 return 'Test';
+		 return View::make('items::index');
 	}
 
 	

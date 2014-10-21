@@ -121,9 +121,12 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+		//Adde components
 		'Way\Generators\GeneratorsServiceProvider',
 		'Dingo\Api\ApiServiceProvider',
 		'Creolab\LaravelModules\ServiceProvider',
+		'Cartalyst\Sentry\SentryServiceProvider',
 
 	),
 
@@ -191,7 +194,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		//Added components
 		'API'             => 'Dingo\Api\Facades\API',
+		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 
 
 	),

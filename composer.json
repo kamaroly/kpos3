@@ -11,7 +11,7 @@
 		"creolab/laravel-modules": "dev-master",
 		"phpunit/phpunit": "4.*",
 		"fzaninotto/faker": "1.*",
-		"moltin/cart": "dev-master"
+		"cartalyst/sentry": "2.0.*"
 	},
 
 

@@ -11,8 +11,8 @@
 <div ng-switch="search.messages">
 
   <ul class="nav nav-pills nav-stacked">
-     <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+  <li class="im_dialog_wrap" >
+      <a class="im_dialog"  href="{{URL::to('sales')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-shopping-cart fa-3x primary"></i> 
@@ -29,7 +29,7 @@
 
 <!--Customers -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('customers')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-users fa-3x primary"></i> 
@@ -46,7 +46,7 @@
 
 <!--Items-->
 <li class="im_dialog_wrap active" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('items')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-barcode fa-3x primary"></i> 
@@ -62,7 +62,7 @@
 </li>
 <!--categories -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('categories')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-cubes fa-3x primary"></i> 
@@ -79,7 +79,7 @@
 
 <!--taxes --> <!--categories -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('taxes')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-usd fa-3x primary"></i> 
@@ -96,7 +96,7 @@
 
 <!--taxes --> <!--categories -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('branches')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-map-marker fa-3x primary"></i> 
@@ -113,7 +113,7 @@
 
 <!--Reports -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('reports')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-line-chart fa-3x primary"></i> 
@@ -130,7 +130,7 @@
 
 <!--Users -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('users')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left">
           <i class="fa fa-user fa-3x primary"></i> 
@@ -147,7 +147,7 @@
 
 <!--Settings -->
 <li class="im_dialog_wrap" >
-      <a class="im_dialog" >
+      <a class="im_dialog" href="{{URL::to('settings')}}">
          <!--iCON-->
          <div class="im_dialog_photo pull-left im_dialog_photo">
           <i class="fa fa-cog fa-3x primary"></i> 

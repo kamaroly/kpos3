@@ -1,6 +1,6 @@
 <?php
 
-Route::get('items','App\Modules\Items\Controllers\itemsController@index');
+Route::get('items','App\Modules\Items\Controllers\ItemsController@index');
 
 
 Route::api(['version' => 'v1', 'prefix' => 'api'], function()

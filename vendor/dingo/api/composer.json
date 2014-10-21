@@ -1,0 +1,43 @@
+{
+    "name": "dingo/api",
+    "description": "A RESTful API package for the Laravel framework.",
+    "keywords": ["restful", "api", "laravel", "dingo"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Jason Lewis",
+            "email": "jason.lewis1991@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~4.1|~5.0",
+        "league/fractal": "0.8.*"
+    },
+    "require-dev": {
+        "lucadegasperi/oauth2-server-laravel": "1.0.*",
+        "illuminate/routing": "~4.1",
+        "illuminate/events": "~4.1",
+        "illuminate/auth": "~4.1",
+        "illuminate/database": "~4.1",
+        "illuminate/pagination": "~4.1",
+        "illuminate/console": "~4.1",
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9",
+        "squizlabs/php_codesniffer": "1.*"
+    },
+    "suggest": {
+        "lucadegasperi/oauth2-server-laravel": "Use the League OAuth 2.0 server to protect your API."
+    },
+    "autoload": {
+        "psr-4": {
+            "Dingo\\Api\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.6-dev",
+            "dev-develop": "0.7-dev"
+        }
+    }
+}
