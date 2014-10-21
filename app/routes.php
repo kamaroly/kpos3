@@ -3,9 +3,18 @@
 
 Route::get('/', function()
 {
-	return View::make('hello ');
+	return View::make('layouts.desktop ');
 });
 
+Route::get('/main', function()
+{
+	return View::make('partials.main');
+});
+
+Route::get('/modal', function()
+{
+	return View::make('partials.modal');
+});
 
 Route::api(['version' => 'v1'], function()
 {
