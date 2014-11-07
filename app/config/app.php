@@ -127,6 +127,7 @@ return array(
 		'Dingo\Api\ApiServiceProvider',
 		'Creolab\LaravelModules\ServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
+		'Kamaro\Cart\CartServiceProvider',
 
 	),
 
@@ -194,10 +195,14 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+
 		//Added components
 		'API'             => 'Dingo\Api\Facades\API',
 		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 
+		'Cart'          => 'Kamaro\Cart\Facades\Cart',
+
+ 
 
 	),
 

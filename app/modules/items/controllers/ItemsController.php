@@ -31,9 +31,10 @@ class ItemsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//get facker instance 
-		 return View::make('items::index');
+		return Item::all()->panigate(10);
 	}
+    
+    
 
 	
 }

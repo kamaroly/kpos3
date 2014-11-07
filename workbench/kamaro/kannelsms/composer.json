@@ -1,0 +1,23 @@
+{
+    "name": "kamaro/kannelsms",
+    "description": "This is a laravel 4 Composer package to send SMS using kannelsms",
+    "authors": [
+        {
+            "name": "Kamaro Lambert",
+            "email": "kamaroly@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Kamaro\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

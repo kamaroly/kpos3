@@ -1,6 +1,9 @@
 <?php
 
-
+Route::get('/cart',function(){
+    
+	return Kamaro\Facades\Cart::contents();
+});
 Route::get('/', function()
 {
 	return View::make('layouts.desktop ');
