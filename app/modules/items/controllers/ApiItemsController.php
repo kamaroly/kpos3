@@ -32,7 +32,7 @@ class ApiItemsController extends \BaseController {
 	public function index()
 	{
 		//get facker instance 
-		 return $this->item->all();
+		 return $this->item->paginate(20);
 	}
 
 	/**
